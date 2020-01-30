@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addContact } from "../actions/actionsContact";
-
+import { addContact } from "../actions/contactsActions";
 class AddContact extends Component {
   addNewContact = () => {
     let name = prompt("donnez votre nom");
     let age = prompt("donnez votre age");
     let newContact = { name: name, age: age };
-    this.props.add(newContact);
+    this.props.addNewContact(newContact);
   };
   render() {
     return (
@@ -20,7 +19,7 @@ class AddContact extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    add: aziz => dispatch(addContact(aziz))
+    addNewContact: aaa => dispatch(addContact(aaa))
   };
 };
 

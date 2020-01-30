@@ -5,10 +5,10 @@ class Contactlist extends Component {
   render() {
     return (
       <div>
-        {this.props.contactList.map(el => (
-          <div>
-            <h1>{el.name}</h1>
-            <h1>{el.age}</h1>
+        {this.props.contacts.map(el => (
+          <div className="contact">
+            <h3>{el.name}</h3>
+            <h3>{el.age}</h3>
           </div>
         ))}
       </div>
@@ -18,7 +18,7 @@ class Contactlist extends Component {
 
 const mapStateToProps = state => {
   return {
-    contactList: state.reducerContact
+    contacts: state.ContactsReducer
   };
 };
 

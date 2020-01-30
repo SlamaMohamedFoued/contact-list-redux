@@ -20,3 +20,11 @@
 .App-link {
   color: #09d3ac;
 }
+.contact {
+  border: 2px solid;
+  display: flex;
+  margin: 10px;
+}
+h3 {
+  margin: 10px;
+}
